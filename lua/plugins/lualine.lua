@@ -187,7 +187,7 @@ return {
         return msg
       end,
       -- icon = " LSP:",
-      color = { fg = "#E76161", gui = "italic" },
+      color = { fg = "#E76161", gui = "Bold" },
     })
 
     -- Add components to right sections
