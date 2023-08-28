@@ -1,8 +1,8 @@
 local Util = require("lazyvim.util")
 local keymap = vim.keymap.set
 -- Silent keymap option
-local opts = { silent = true }
 
+-- go to dashboard
 keymap("n", "<leader>\\", function()
   -- close all open buffers before open dashboard
   for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
@@ -15,4 +15,8 @@ keymap("n", "<leader>\\", function()
   if Util.has("alpha-nvim") then
     require("alpha").start(true)
   end
-end, opts)
+end, { silent = true, desc = "Open dashboard" })
+
+-- save file
+keymap("n", "<leader>bw", ":w<CR>", { silent = true, desc = "Save buffer" })
+keymap("n", "<leader>ba", ":wa<CR>", { silent = true, desc = "Save all buffer" })
