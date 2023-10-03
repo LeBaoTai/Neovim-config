@@ -5,4 +5,5 @@ return {
   { "rcarriga/nvim-notify", enabled = false },
   -- disable nvim-lualine
   -- { "nvim-lualine/lualine.nvim", enabled = false },
+  -- { "folke/flash.nvim", enabled = false },
 }
