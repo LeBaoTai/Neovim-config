@@ -7,7 +7,7 @@ local function selectColorSchemeByTime()
   local hour = tonumber(os.date("%H"))
   local colorscheme
 
-  if hour >= 8 and hour < 18 then
+  if hour >= 8 and hour < 21 then
     colorscheme = "cattppuccin"
   else
     local night_themes = { "kanagawa", "nightfox", "rose-pine", "tokyonight" }
@@ -86,7 +86,7 @@ return {
         conditionals = { "italic" },
         loops = {},
         functions = {},
-        keywords = { "italic" },
+        keywords = { "bold" },
         strings = {},
         variables = {},
         numbers = {},
