@@ -3,7 +3,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       {
-        "Saecki/crates.nvim",
+        "saecki/crates.nvim",
         event = { "BufRead Cargo.toml" },
         config = true,
       },
@@ -18,9 +18,12 @@ return {
   },
 
   {
-    "Saecki/crates.nvim",
+    "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
-    config = true,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup()
+    end,
   },
 
   {

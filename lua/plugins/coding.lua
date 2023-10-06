@@ -128,16 +128,4 @@ return {
     },
     build = "make install",
   },
-  -- Add Tailwind CSS LSP
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        -- rustywind for tailwindcss
-        "tailwindcss-language-server",
-        "rustywind",
-      },
-    },
-  },
 }
