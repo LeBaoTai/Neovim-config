@@ -26,3 +26,5 @@ keymap(
   ':echo "Color scheme: " . g:colors_name<CR>',
   { noremap = true, silent = true, desc = "Show current color scheme" }
 )
+keymap("n", ";", ":", {})
+-- map ; to :

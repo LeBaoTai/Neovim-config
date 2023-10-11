@@ -1,9 +1,4 @@
 local function selectColorSchemeByTime()
-  -- skip if running in vscode
-  if vim.g.vscode then
-    return "tokyonight"
-  end
-
   local hour = tonumber(os.date("%H"))
   local colorscheme
 
@@ -26,7 +21,7 @@ return {
     "rebelot/kanagawa.nvim",
     lazy = true,
     opts = {
-      transparent = true,
+      transparent = false,
       theme = "wave",
       colors = {
         theme = {
@@ -142,7 +137,7 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       style = "storm",
-      transparent = true,
+      transparent = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
@@ -154,7 +149,7 @@ return {
     "EdenEast/nightfox.nvim",
     opts = {
       options = {
-        transparent = true,
+        transparent = false,
         styles = {
           comments = "italic",
           keywords = "bold",
