@@ -12,8 +12,8 @@ keymap("n", "<leader>\\", function()
     end
   end
 
-  if Util.has("alpha-nvim") then
-    require("alpha").start(true)
+  if Util.has("dashboard") then
+    require("dashboard").start(true)
   end
 end, { silent = true, desc = "Open dashboard" })
 
@@ -23,8 +23,8 @@ keymap("n", "<leader>ba", ":wa<CR>", { silent = true, desc = "Save all buffer" }
 keymap(
   "n",
   "<leader>ut",
-  ':echo "Color scheme: " . g:colors_name<CR>',
+  ':echo "Color scheme: " . colorscheme<CR>',
   { noremap = true, silent = true, desc = "Show current color scheme" }
 )
-keymap("n", ";", ":", {})
 -- map ; to :
+keymap("n", ";", ":", {})
