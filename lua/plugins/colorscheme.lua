@@ -16,7 +16,6 @@ local function selectColorSchemeByTime()
 end
 
 return {
-
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
